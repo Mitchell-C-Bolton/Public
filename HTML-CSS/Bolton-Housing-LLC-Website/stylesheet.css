@@ -1,0 +1,109 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#nav-bar{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    border-bottom: solid grey;
+    background-color: #4b5353;
+    color: white;
+    padding: 20px;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+}
+
+.nav-item{
+    padding-left: 25px;
+    padding-right: 25px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 20px;
+}
+
+.nav-item:first-of-type{
+    padding-right:80px;
+}
+.nav-item:last-of-type{
+    padding-right:100px;
+}
+
+.LogoPhoto{
+    width: 200px;
+}
+
+body{
+    justify-content: center;
+    background-color:#848e8e;
+}
+
+.HousePhotosFlex{
+    padding-top:130px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.HousePhotosFlex .HousePhoto{
+    min-width: 350px;
+    max-width: 33%;
+    padding: 10px;
+}
+
+footer{
+    width:100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #4b5353;
+    color: white;
+    border-top: solid grey;
+    padding:13px;
+}
+
+@media (max-width: 700px){
+    #nav-bar{
+        flex-direction: column;
+        flex-wrap:nowrap;
+        padding: 0px;
+        padding-top: 0;
+    }  
+
+    .nav-item{
+        border-bottom: solid grey;
+        padding: 5px 0;
+    }
+
+    .nav-item:first-of-type{
+        border-bottom: transparent;
+        padding: 0;
+    }
+    
+    .nav-item:last-of-type{
+        padding-right:0;
+        text-align: center;
+        border-bottom: 0;
+    }
+
+    .LogoPhoto{
+        display: none;
+    }
+
+    footer{
+        font-size: 23px;
+        padding:7px;
+    }
+
+}
+
+
+
