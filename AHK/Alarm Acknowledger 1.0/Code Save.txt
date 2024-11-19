@@ -1,0 +1,340 @@
+Gui, +alwaysontop -SysMenu
+
+If ResponderType = Other
+{
+Gui, Add, Text,, Responder Type
+Gui, Add, Edit, vResponderType
+}
+
+If Priority = 1
+{
+Gui, Add, Text,, D3 #
+Gui, Add, Edit, vSLATT
+STTText=;D3 #:
+}
+else
+{
+vSLATT=
+}
+
+If Cause = Device Malfunction
+{
+Gui, Add, Text,, Device TT #
+Gui, Add, Edit, vDeviceTT
+DTTText=;Device TT #:
+}
+else
+{
+DeviceTT=
+DTTText=
+}
+
+Gui, Add, Button, Default gAcknowledge, Acknowledge
+Gui, Add, Button,, Cancel
+Gui, Show,, Information
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+
+If Confirmed = 1
+  Confirmed =;Responder has inspected the device
+else
+Confirmed =
+
+If Scanned = 1
+	Scanned =;The responder stated they scanned their badge at the security device
+else
+Scanned =
+
+If Day1 = 1
+ Day1 =;Day 0
+else
+	Day1 =
+
+If ResponderType = ACS Operator
+ResponderType = %A_UserName%
+
+
+;--------------------------------------------------------------------------------------- Help
+
+  ButtonHelp:
+
+  Gui, Destroy
+
+  Gui, +alwaysontop
+
+  Gui, Font, underline
+  Gui, Add, Text,X10 Y10, Overview:
+
+  Gui, Font, norm
+  Gui, Add, Text,X10 Y25,Alarm Acknowledger is a tool aimed at increasing the efficiency and accuracy of Amazon Corporate Security ACS operators in regards to alarm clearance.
+  Gui, Add, Text,X10 Y40,The goal of this tool is to provide five attributes:
+  Gui, Add, Text,X30 Y70,- Create a universally accepted method for acknowledging, in-progressing and updating alarms.
+  Gui, Add, Text,X30 Y85,- Simplify training for both new and experienced operators.
+  Gui, Add, Text,X30 Y100,- Reduce the time required to properly acknowledge, in-progress and update alarms.
+  Gui, Add, Text,X30 Y115,- Increase the accuracy of the information entered to acknowledge, in-progress and update alarms.
+  Gui, Add, Text,X30 Y130,- Increase the overall efficiency of ACS alarm processing capabilities.
+
+  Gui, Font, underline
+  Gui, Add, Text,X10 Y160,Hot Keys:
+
+  Gui, Font, norm
+  Gui, Add, Text,X30 Y175,- CTRL + (Up Arrow): In-Progress Selected Alarm(s)
+  Gui, Add, Text,X30 Y190,- CTRL + 0: Acknowledge Selected Alarm(s)
+  Gui, Add, Text,X30 Y205,- CTRL + 1: Update Selected Alarm
+  Gui, Add, Text,X30 Y220,- CTRL + /: Clear Under Construction (UC) Alarm(s)
+  Gui, Add, Text,X30 Y235,- CTRL + * or 8: Clear NVR Coms Loss Alarm(s)
+  Gui, Add, Text,X30 Y250,- CTRL + (Del): Delete Cleared alarm(s)
+
+  Gui, Font, underline
+  Gui, Add, Text,X10 Y280,Notes:
+
+  Gui, Font, norm
+  Gui, Add, Text,X30 Y295,- Alarm Acknowledger can be utilized on a desktop PC utilizing the numpad and a laptop utilizing the standard keyboard.
+  Gui, Add, Text,X30 Y310,- If Alarm Acknowledger is used outside of Lenel it will automatically re-select your previously selected Lenel segment.
+  Gui, Add, Text,X30 Y325,- If you check "Zone 5 / Priority SLA" you will be required to enter a trouble ticket number.
+  Gui, Add, Text,X30 Y340,- If you select "Responder Type" "Other" you will be required to fill out the responder type.
+  Gui, Add, Text,X30 Y355,- If you are experiencing issues with Alarm Acknowledger click the "!" button to submit your issue.
+
+  Gui, Font, underline
+  Gui, Add, Text,X10 Y390,Known Issues:
+
+  Gui, Font, norm
+  Gui, Add, Text,X30 Y405,- Occasionally Lenel will freeze on the "Acknowledge Selected Alarms" screen. This issue has been fixed.
+  Gui, Add, Text,X30 Y420,- Occasionally Alarm Acknowledger won't let you deselect a Lenel window. This is a known issue with Lenel and unrelated to the script.
+  Gui, Add, Text,X30 Y435,- Alarm Acknowledger does not work when Lenel is full screen.
+  Gui, Add, Text,X30 Y450,- If you press CTRL + 0 and 1 on the exact same frame the GUI's will combine together.
+  Gui, Add, Text,X30 Y465,
+
+  Gui, Show,, Help
+  Return
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+^1::
+^Numpad1::
+
+Gui, Destroy
+Gui, Color, Black,White
+Gui, +alwaysontop +ToolWindow -Border -Theme
+Gui, Font, w800 s9, Calibri
+Gui, Add, Picture, x0 y0 h135 w105,  %A_WorkingDir%\AAcknowledgerGUI.jpg
+Gui, Add, Button, Default W85 x10 y10, Construction
+Gui, Add, Button, W85, NVR
+Gui, Add, Button, gUCTCGUI W85, UCTC
+Gui, Add, Button, W85, Cancel
+Gui, Margin , x0, Y0
+Gui, Show, x%acknowledgeX% y%acknowledgeY%, Quick Clear
+
+Return
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
