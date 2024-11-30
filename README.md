@@ -4,7 +4,8 @@ Welcome to my Personal Projects Portfolio! This repository is a collection of pr
 
 ## 📂 Projects
     
-1. House real-estate website 
+### House real-estate website 
+
 Description:
 A custom-built website for my mother's housing business, designed to provide an intuitive and professional online presence for her services.
 
@@ -37,6 +38,6 @@ If you have questions, feedback, or collaboration ideas, feel free to reach out!
 📩 Email: mitchell-bolton@outlook.com
 📱 LinkedIn: https://www.linkedin.com/in/mitchellcbolton/
 
-###Thank you for stopping by! 🌟
+### Thank you for stopping by! 🌟
 I’m excited to continue learning and growing as a developer, and I hope you find my projects inspiring or helpful. Stay tuned for updates!
 
