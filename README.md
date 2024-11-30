@@ -35,7 +35,9 @@ While this repository serves as a personal portfolio, I welcome constructive fee
 
 ## 📧 Contact Me
 If you have questions, feedback, or collaboration ideas, feel free to reach out!
+
 📩 Email: mitchell-bolton@outlook.com
+
 📱 LinkedIn: https://www.linkedin.com/in/mitchellcbolton/
 
 ### Thank you for stopping by! 🌟
